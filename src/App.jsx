@@ -4,6 +4,7 @@ import Search from '../components/search'
 import axios from "axios"
 
 import Results from '../components/Results'
+import Popup from '../components/Popup'
 
 
 
@@ -39,6 +40,23 @@ return { ...prevState, results:results }                })
           
         });
     }
+const openPopup = id =>{
+    axios(apiurl + '&i=' + id).then(({ data })=>{
+        let result = data;
+console.log(result);
+        setState(prevState =>{
+            return {...prevState,selected: result}
+        });
+
+    });
+
+    }
+
+const closePopup = ()=> {
+    return {...prevState, selected: {}}
+
+}
+
     return(
         
         <div>
@@ -49,9 +67,10 @@ return { ...prevState, results:results }                })
 <Search
  handleInput={handleInput}
  search={search}/>
-    <Results results={state.results}/>
+    <Results results={state.results} openPopup={openPopup}/>
+    {(typeof state.selected.Title != 'undefined') ? <Popup selected={state.selected}closePopup={closePopup}/> :false}
 
-
+    
 </main>
 
 
