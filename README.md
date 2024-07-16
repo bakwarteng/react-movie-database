@@ -14,6 +14,8 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Screenshot](#screenshot)
+- [Link](#link)
+
 
 ## Description
 This is a front end, single page application that was built using ReactJS and the Open Movie Database OMDB API. The user can type in their desired movie title in the search bar and press enter, then they are presented with 10 posters with their titles. The user can click on a movie and be presented with the movie's plot description, rating, and year of release.
@@ -40,4 +42,10 @@ For questions about this project, please contact [bakwarteng](https://github.com
 
 ## Screenshot
 ![alt text](<Screenshot 2024-07-16 161018.png>)
+
+
+## Link
+link to deployed application: https://bakwarteng-movie-database.netlify.app/
+
+
 
