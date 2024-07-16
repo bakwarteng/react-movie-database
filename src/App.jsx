@@ -16,7 +16,7 @@ const [state, setState]= useState({
     results:[],
     selected:{}
 });
-    const apiurl = "http://www.omdbapi.com/?apikey=8c93180c";
+    const apiurl = "https://www.omdbapi.com/?apikey=8c93180c";
     const search =(e)=>{
         if(e.key==='Enter'){
             axios(apiurl + "&s=" + state.s).then(({data})=>{
