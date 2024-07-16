@@ -53,8 +53,9 @@ console.log(result);
     }
 
 const closePopup = ()=> {
+setState(prevState => {
     return {...prevState, selected: {}}
-
+});
 }
 
     return(
