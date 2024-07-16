@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import style from "./assets/style.css"
-import Search from '../components/search'
+import Search from '../components/Search'
 import axios from "axios"
 
 import Results from '../components/Results'
